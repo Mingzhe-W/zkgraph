@@ -1,0 +1,22 @@
+specVersion: 0.0.2
+apiVersion: 0.0.2
+name: eg_hello
+description: "This demo zkGraph return the BTC and ETH conversion rate when the event was emitted from the dummy contract i created for this graph"
+repository: https://github.com/hyperoracle/zkgraph
+dataSources:
+  - kind: ethereum
+    network: sepolia
+    event:
+      - address: '0x4137376d8214EB47Df1190659640382eEe153BE7'
+        events: 
+          - "Pricelist(int256,int256)"
+
+mapping:
+  language: wasm/assemblyscript
+  file: ./mapping.ts
+  handler: handleBlocks
+
+dataDestinations:
+  - kind: ethereum
+    network: sepolia
+    address: "0x0000000000000000000000000000000000000001"
