@@ -13,6 +13,8 @@ Execution `zkgraph exec 5110071`, block number 5110071 is the block that I emitt
 
 should output 0000000000000000000000000000000000000000000000000000000000000010
 
+You can check output.png for result on my machine
+
 The code is to calculate the BTC/ETH conversion rate for trading strategy 
 
 It got ETH price and BTC price from the equiped demo-only smart contract price_flattened.sol. In real use case it can be any pair of currency being traded.
