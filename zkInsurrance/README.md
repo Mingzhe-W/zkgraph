@@ -2,9 +2,9 @@
 
 ## ![logic](./logic.jpg)
 
-Traditionally, when something is broken and we file a claim for our insurance,  you need to show them your proof of purchase/ proof of ownership. It usually involved a lot to human work and there is very few standaradization about proof of purchase: what counts and what not? With blockchain, the transaction is the nature proof of purchase. We can lerveage this along with zkgraph to make it even easier for a insurrance company to automatically deal with such claim.
+Traditionally, when something is broken and we file a claim for our insurance,  you need to show them your proof of purchase/ proof of ownership. It usually involves a lot of human work and there is very little standardization about proof of purchase: what counts and what not? With blockchain, the transaction is the natural proof of purchase. We can leverage this along with zkgraph to make it even easier for an insurance company to deal with such claims automatically.
 
-User only need to submit their transaction block_id and that's it. Other stuffs will be handled by insurance policy writen in zkgraph. 
+A user only needs to submit their transaction block_id and that's it. Other stuff will be handled by the insurance policy written in zkgraph. 
 
 
 
