@@ -5,6 +5,8 @@ price_flattened.sol : dummy contract I wrote specifically for this zkgraph
 mapping.ts: zkgraph
 
 
+You can directly run `./script.sh`
+
 
 Run `zkgraph compile`
 
