@@ -1,0 +1,22 @@
+specVersion: 0.0.2
+apiVersion: 0.0.2
+name: eg_event
+description: "zkGraph for zkInsurrance"
+repository: 
+dataSources:
+  - kind: ethereum
+    network: sepolia
+    event:
+      - address: '0x93099130CF054e1B6B61d60deF66ad9c54fF53e7'
+        events: 
+          - "Transfer(address, uint256)"
+
+mapping:
+  language: wasm/assemblyscript
+  file: ./mapping.ts
+  handler: handleBlocks
+
+dataDestinations:
+  - kind: ethereum
+    network: sepolia
+    address: "0x0000000000000000000000000000000000000001"
