@@ -2,8 +2,8 @@
 import { Address, BigInt, require } from "@hyperoracle/zkgraph-lib";
 import { Bytes, Block, Event } from "@hyperoracle/zkgraph-lib";
 
-let addr = Bytes.fromHexString('0x93099130CF054e1B6B61d60deF66ad9c54fF53e7');
-let esig_sync = Bytes.fromHexString("0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1");
+let addr = Bytes.fromHexString('0x7169D38820dfd117C3FA1f22a697dBA58d90BA06');
+let esig_sync = Bytes.fromHexString("0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef");
 
 export function handleBlocks(blocks: Block[]): Bytes {
 
@@ -16,22 +16,26 @@ export function handleBlocks(blocks: Block[]): Bytes {
   let event = eventsByAcctEsig[0];
   let eventData = changetype<Bytes>(event.data);
 
-  let insuree: Address = Address.fromBytes(eventData.slice(0,32));
-  let amount: BigInt = BigInt.fromBytes(eventData.slice(32,64));
-
+  //let insuree: Address = Address.fromBytes(eventData.slice(0,32));
+  // it was commented out because it was not used for this graph
+  let amount: BigInt = BigInt.fromBytes(eventData.slice(64,96));
+  
   // some logic to check if insuree address match with the user offchain input.
   // to be added 
-
   // some other policy to be added for insurance eligibility check
   // check if insuree == user.
   // check if insuree.eligible 
+  // and so on, you name it
 
   // some other insurance policy may apply.  
+
 
   // Deductable differnt from insurrance policy, 
   let deductable = BigInt.fromI32(100); 
   var indemnity =  BigInt.fromI32(0);
 
+
+  // Determine the amount of indemnity
   if(amount.minus(deductable).gt(0)){
     indemnity = amount.minus(deductable);
   }

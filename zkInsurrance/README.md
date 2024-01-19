@@ -2,11 +2,16 @@
 
 ## ![logic](./logic.jpg)
 
-Traditionally, when something is broken and we file a claim for our insurance,  you need to show them your proof of purchase/ proof of ownership. It usually involves a lot of human work and there is very little standardization about proof of purchase: what counts and what not? With blockchain, the transaction is the natural proof of purchase. We can leverage this along with zkgraph to make it even easier for an insurance company to deal with such claims automatically.
+Traditionally, when something is broken and we file a claim for our insurance,  you need to show them your proof of purchase/ proof of ownership. It usually involved a lot to human work and there is very few standaradization about proof of purchase: what counts and what not? With blockchain, the transaction is the nature proof of purchase. We can lerveage this along with zkgraph to make it even easier for a insurrance company to automatically deal with such claim.
 
-A user only needs to submit their transaction block_id and that's it. Other stuff will be handled by the insurance policy written in zkgraph. 
+User only need to submit their transaction block_id and that's it. Other stuffs will be handled by insurance policy writen in zkgraph. 
 
+## Test Contract and Block id
+when debugging execution and proof generation, you may use:
+- block id: 5114301
+- contract address: 0x7169D38820dfd117C3FA1f22a697dBA58d90BA06
 
+or you can just use 'script.sh' to test the whole workflow(remember to fill in the zkgraph.config.ts)
 
 ## Usage CLI
 
