@@ -8,6 +8,10 @@ mapping.ts: zkgraph
 You can directly run `./script.sh`
 
 
+
+or
+
+
 Run `zkgraph compile`
 
 
